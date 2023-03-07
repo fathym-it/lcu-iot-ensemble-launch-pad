@@ -27,7 +27,7 @@
         "PathRegex": "/demo/iot.*"
       },
       "LowCodeUnit": {
-        "SourceControlLookup": "fork|github://fathym-it/smart-building-demo",
+        "SourceControlLookup": "fork|github://fathym-it/iot-ensemble-client-real-time-charts",
         "Build": "latest",
         "Path": "lcu-github-artifacts-release.yml",
         "Type": "GitHub"
