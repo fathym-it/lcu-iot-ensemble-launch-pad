@@ -41,7 +41,7 @@
         "lcu-state-config": {
           "Name": "state-config",
           "Description": "state-config",
-          "Value": "{\n  \"IoTAPIQuery\": \"/WarmQuery?includeEmulated=true&page=1&pageSize=100\",\n  \"IoTAPIRoot\": \"/api\",\n  \"RefreshRate\": \"30000\"\n}"
+          "Value": "{\n  \"APIQuery\": \"/WarmQuery?includeEmulated=true&page=1&pageSize=100\",\n  \"APIRoot\": \"/api\",\n  \"RefreshRate\": \"30000\"\n}"
         }
       }
     }
