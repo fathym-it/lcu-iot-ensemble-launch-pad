@@ -1,0 +1,85 @@
+{
+  "Applications": {
+    "$1": {
+      "Application": {
+        "Name": "IoT Ensemble API Proxy",
+        "Description": "The API Proxy for IoT Ensemble APIs."
+      },
+      "LookupConfig": {
+        "PathRegex": "/api.*"
+      },
+      "LowCodeUnit": {
+        "APIRoot": "https://fathym-cloud-prd.azure-api.net/fcp-iotensemble",
+        "Security": "lcu-subscription-key~{{IOT_ENSEMBLE_API_KEY}}",
+        "Type": "API"
+      },
+      "Processor": {
+        "InboundPath": "api",
+        "Type": "Proxy"
+      }
+    },
+    "$2": {
+      "Application": {
+        "Description": "A starter for custom IoT charts that utilizes IoT data.",
+        "Name": "IoT Real Time Charts - Forked Recipe"
+      },
+      "LookupConfig": {
+        "PathRegex": "/demo/iot.*"
+      },
+      "LowCodeUnit": {
+        "SourceControlLookup": "fork|github://fathym-it/smart-building-demo",
+        "Build": "latest",
+        "Path": "lcu-github-artifacts-release.yml",
+        "Type": "GitHub"
+      },
+      "Processor": {
+        "BaseHref": "/demo/iot/",
+        "DefaultFile": "index.html",
+        "Type": "DFS"
+      },
+      "DataTokens": {
+        "lcu-state-config": {
+          "Name": "state-config",
+          "Description": "state-config",
+          "Value": "{\n  \"IoTAPIQuery\": \"/WarmQuery?includeEmulated=true&page=1&pageSize=100\",\n  \"IoTAPIRoot\": \"/api\",\n}"
+        }
+      }
+    }
+  },
+  "Environments": {
+    "$#.PrimaryEnvironment": {
+      "Artifacts": {
+        "react-build-release": {
+          "Name": "React Build/Release",
+          "Output": "./build",
+          "Type": "GitHub",
+          "BuildCommand": "npm run build",
+          "InstallCommand": "npm ci",
+          "NPMRegistry": "https://registry.npmjs.org/"
+        }
+      },
+      "DevOpsActions": {
+        "github-artifacts-release-react": {
+          "Name": "GitHub Artifacts - Release - React",
+          "Path": "lcu-github-artifacts-release.yml",
+          "ArtifactLookups": ["react-build-release"],
+          "Templates": [
+            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/_header.hbs.yml",
+            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/release-flow.yml"
+          ]
+        }
+      },
+      "Sources": {
+        "fork|github://fathym-it/iot-ensemble-client-real-time-charts": {
+          "DevOpsActionTriggerLookups": ["github-artifacts-release-react"],
+          "Branches": ["main"],
+          "MainBranch": "main",
+          "Organization": "fathym-it",
+          "Repository": "iot-ensemble-client-real-time-charts",
+          "Name": "github://fathym-it/iot-ensemble-client-real-time-charts",
+          "Type": "GitHub"
+        }
+      }
+    }
+  }
+}

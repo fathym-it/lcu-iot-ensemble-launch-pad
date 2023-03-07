@@ -1,0 +1,10 @@
+{
+  "Package": {
+    "Name": "IoT Real Time Charts Demo Starter",
+    "Description": "A starter for custom IoT charts that utilizes IoT data.",
+    "Button": "Launch IoT Real Time Charts",
+    "Image": "https://www.fathym.com/dashboard/assets/images/black_thinky.png",
+    "PreviewImage": "https://www.fathym.com/dashboard/assets/images/black_thinky.png",
+    "UsesGit": true
+  }
+}
