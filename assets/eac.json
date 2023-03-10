@@ -24,7 +24,7 @@
         "Name": "IoT Real Time Charts - Forked Recipe"
       },
       "LookupConfig": {
-        "PathRegex": "/demo/iot.*"
+        "PathRegex": "/demo.*"
       },
       "LowCodeUnit": {
         "SourceControlLookup": "fork|github://fathym-it/iot-ensemble-client-real-time-charts",
@@ -33,7 +33,7 @@
         "Type": "GitHub"
       },
       "Processor": {
-        "BaseHref": "/demo/iot/",
+        "BaseHref": "/demo/",
         "DefaultFile": "index.html",
         "Type": "DFS"
       },
