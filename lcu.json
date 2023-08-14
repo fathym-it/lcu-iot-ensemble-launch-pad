@@ -2,9 +2,28 @@
   "Package": {
     "Name": "IoT Real Time Charts Demo Starter",
     "Description": "A starter for custom IoT charts that utilizes IoT data.",
-    "Button": "Launch IoT Real Time Charts",
-    "Image": "https://www.fathym.com/dashboard/assets/images/black_thinky.png",
-    "PreviewImage": "https://www.fathym.com/dashboard/assets/images/black_thinky.png",
-    "UsesGit": true
+    "Image": "https://www.fathym.com/assets/images/logo.png",
+    "PreviewImage": "https://www.fathym.com/assets/images/logo.png",
+    "Intents": [
+      "BioTech",
+      "IoT Dashboard",
+      "Launch Control",
+      "Getting Started",
+      "Medical Devices",
+      "Azure Cloud"
+    ]
+  },
+  "Configurations": {
+    "Basic": {
+      "Name": "IoT Real Time Charts Demo Starter",
+      "Description": "A starter for custom IoT charts that utilizes IoT data.",
+      "Phases": [
+        {
+          "Name": "Configure IoT Real Time Charts",
+          "Order": 1,
+          "Asset": "configure"
+        }
+      ]
+    }
   }
 }
