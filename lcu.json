@@ -1,7 +1,7 @@
 {
   "Package": {
     "Name": "IoT Launch Pad",
-    "Description": "An IoT launch pad that consists of a data dashboard (GitHub fork) and Freeboard dashboard (NPM) pre-populated with emulated data or device data from IoT Ensemble.",
+    "Description": "An IoT launch pad that consists of a data dashboard (GitHub fork) and Freeboard dashboard (NPM) auto-populated with emulated data or device data from IoT Ensemble APIs.",
     "Image": "https://www.fathym.com/assets/images/logo.png",
     "PreviewImage": "https://www.fathym.com/assets/images/logo.png",
     "Intents": [
@@ -16,7 +16,7 @@
   "Configurations": {
     "Basic": {
       "Name": "IoT Launch Pad",
-      "Description": "An IoT launch pad that consists of a data dashboard (GitHub fork) and Freeboard dashboard (NPM) pre-populated with emulated data or device data from IoT Ensemble.",
+      "Description": "An IoT launch pad that consists of a data dashboard (GitHub fork) and Freeboard dashboard (NPM) auto-populated with emulated data or device data from IoT Ensemble APIs.",
       "Phases": [
         {
           "Name": "Configuring IoT Launch Pad",
