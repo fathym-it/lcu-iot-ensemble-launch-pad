@@ -1,7 +1,7 @@
 {
   "Package": {
-    "Name": "IoT Real Time Charts Demo Starter",
-    "Description": "A starter for custom IoT charts that utilizes IoT data.",
+    "Name": "IoT Launch Pad",
+    "Description": "An IoT launch pad that consists of a data dashboard (GitHub fork) and Freeboard dashboard (NPM) auto-populated with emulated data or device data from IoT Ensemble APIs.",
     "Button": "Launch IoT Real Time Charts",
     "Image": "https://www.fathym.com/dashboard/assets/images/black_thinky.png",
     "PreviewImage": "https://www.fathym.com/dashboard/assets/images/black_thinky.png",
