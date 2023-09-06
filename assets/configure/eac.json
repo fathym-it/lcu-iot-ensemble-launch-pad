@@ -154,6 +154,10 @@
   },
   "Projects": {
     "{{PROJECT_LOOKUP}}": {
+      "Details": {
+        "Name": "{{#if (lookup EaC.Projects PROJECT_LOOKUP)}}{{#if Details.Name}}{{Details.Name}}{{/if}}{{else}}IoT Launch Pad{{/if}}",
+        "Description": "{{#if (lookup EaC.Projects PROJECT_LOOKUP)}}{{#if Details.Description}}{{Details.Description}}{{/if}}{{else}}An IoT launch pad that consists of a data dashboard (GitHub fork) and Freeboard dashboard (NPM) pre-populated with emulated data or device data from IoT Ensemble.{{/if}}"
+      },
       "ApplicationLookups": [
         "{{PROJECT_LOOKUP}}-iot-ensemble-api-proxy",
         "{{PROJECT_LOOKUP}}-freeboard-api",
